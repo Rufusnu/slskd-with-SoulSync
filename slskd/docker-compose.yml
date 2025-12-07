@@ -4,6 +4,9 @@ services:
   slskd:
     image: slskd/slskd
     container_name: slskd
+    # UID & GID should be of the user which run the docker container
+    # This ensures that the downloads will be owned by the right user
+    user: "[UID]:[GID]"
     restart: unless-stopped
     
     ports:
@@ -20,4 +23,5 @@ services:
       
     volumes:
       - ./data:/app  # Change if Needed: directory where slskd creates downloads, incomplete, data and scripts directories
+
 

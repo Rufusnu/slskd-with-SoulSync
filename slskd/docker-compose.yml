@@ -13,10 +13,11 @@ services:
       
     environment:
       SLSKD_REMOTE_CONFIGURATION: "true"
-      SLSKD_SLSK_USERNAME: "rufusnu"
-      SLSKD_SLSK_PASSWORD: "house32mE"
-      SLSKD_SHARED_DIR: "/mnt/ciocanuzfs/_smb/rufusnu/DJ/Music"
+      SLSKD_SLSK_USERNAME: "[username]"
+      SLSKD_SLSK_PASSWORD: "[password]"
+      SLSKD_SHARED_DIR: "[Soulseek/Shared/Directory]"
       SLSKD_NO_AUTH: "true"
       
     volumes:
-      - /home/rufusnu/soulseek-automation/slskd/data:/app
+      - ./data:/app  # Change if Needed: directory where slskd creates downloads, incomplete, data and scripts directories
+

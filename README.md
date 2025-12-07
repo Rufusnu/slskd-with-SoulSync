@@ -1,1 +1,1 @@
-# Slskd-with-SoulSync
+# slskd-with-SoulSync
